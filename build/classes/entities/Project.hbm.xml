@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/04/2019 05:26:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entities.Project" table="project" catalog="db2_mysql" optimistic-lock="version">
+        <id name="projno" type="string">
+            <column name="PROJNO" length="6" />
+            <generator class="assigned" />
+        </id>
+        <property name="projname" type="string">
+            <column name="PROJNAME" length="24" not-null="true" />
+        </property>
+        <property name="deptno" type="string">
+            <column name="DEPTNO" length="3" not-null="true" />
+        </property>
+        <property name="respemp" type="string">
+            <column name="RESPEMP" length="6" not-null="true" />
+        </property>
+        <property name="prstaff" type="big_decimal">
+            <column name="PRSTAFF" precision="5" />
+        </property>
+        <property name="prstdate" type="date">
+            <column name="PRSTDATE" length="10" />
+        </property>
+        <property name="prendate" type="date">
+            <column name="PRENDATE" length="10" />
+        </property>
+        <property name="majproj" type="string">
+            <column name="MAJPROJ" length="6" />
+        </property>
+    </class>
+</hibernate-mapping>
